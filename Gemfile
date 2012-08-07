@@ -4,10 +4,12 @@ gem 'rails', '3.2.7'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'pg' , '0.12.2'
 
 group :development , :test do
-	gem 'sqlite3', '1.3.5'
+	#gem 'sqlite3', '1.3.5'
 	gem 'rspec-rails' , '2.10.0'
+	gem 'guard-rspec', '0.5.5'
 end
 
 
@@ -27,10 +29,15 @@ gem 'jquery-rails'
 
 group :test do
 	gem 'capybara', '1.1.2'
+	gem 'rb-fsevent', '0.9.1', :require => false
+  	gem 'growl', '1.0.3'
+  	#gem 'spork-rails'
+  	gem 'spork', '~> 1.0rc'
+  	gem 'guard-spork'
 end
 
 group :production do
-	gem 'pg' , '0.12.2'
+	
 end
 
 # To use ActiveModel has_secure_password
